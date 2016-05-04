@@ -22,6 +22,7 @@
 \usepackage{multicol}
 \usepackage[absolute,overlay]{textpos}
 \usepackage{beamerKITdefs}
+\usepackage{algorithmic}
 
 \pdfpageattr {/Group << /S /Transparency /I true /CS /DeviceRGB>>}	%required to prevent color shifting withd transparent images
 
@@ -50,7 +51,34 @@
 
 
 \begin{frame}{Folien}
-Online unter: github.com/ISibboI/AlgoI-Tut
+Online unter: https://github.com/ISibboI/AlgoI-Tut
+\end{frame}
+
+\newcommand{\nat}{\mathbb{N}}
+
+\begin{frame}
+\footnotesize
+    \begin{algorithmic}[1]
+      \STATE \textbf{function} \textit{merge}($A : $ Array $[1..n_1]$ of $\nat_{\geq 0} $, $B : $ Array $[1..n_2]$ of $\nat_{\geq 0} $)
+	\STATE \textbf{assert} $A[i] \leq A[j]$ \quad $ \forall i \leq j$ mit  $i, j \in \{1,..., n_1\}$
+	\STATE \textbf{assert} $B[i] \leq B[j]$ \quad $ \forall i \leq j$ mit $i, j \in \{1,..., n_2\}$
+	\STATE $A[n_1+1] := \infty$, $B[n_2+1] := \infty$
+	\STATE $n := n_1 + n_2$ 
+	\STATE $j_A := 1$, $j_B := 1$;
+      	\STATE \textbf{for} $i:=1$ \textbf{to} $n$ \textbf{do}
+        \STATE \quad $C[i] = \min(A[j_A],B[j_B])$
+        \STATE \quad \textbf{if} $A[j_A] < B[j_B]$ \textbf{then}  	
+        \STATE \quad \quad $j_A = j_A + 1$ 
+	\STATE \quad \textbf{else}	
+        \STATE \quad \quad $j_B = j_B + 1$ 
+        \STATE \quad \textbf{invariant} $C[1..i]$ enthält genau $A[1..j_A-1], B[1..j_B-1]$ 
+	\STATE \quad \textbf{invariant} $B[k] \leq A[j_A] \quad  \forall k \in \{1..j_B-1\}$, $A[k] \leq B[j_B]\quad  \forall k \in \{1..j_A-1\}$ 
+	\STATE \quad \textbf{invariant} $C[1..i]$ ist sortiert 
+        \STATE \textbf{assert} $j_A = n_1+1, j_B = n_2 + 1$ 
+        \STATE \textbf{assert}  $C[i] \leq C[j]$ \quad $ \forall i \leq j,$ $i, j \in \{1,..., n\}$
+        \STATE \textbf{assert} $C[1..n]$ enthält genau $A[1..n_1], B[1..n_2]$ 
+      \RETURN C
+    \end{algorithmic}
 \end{frame}
 
 \section{Übungsblatt}
