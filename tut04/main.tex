@@ -91,5 +91,34 @@ Zeige, dass eine Teilmenge $M \subset U$ existiert mit $|M| \geq n$, sodass alle
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Sparse Array}
+Ein Sparse Array ist eine Datenstruktur mit den Eigenschaften eines beschränkten Arrays und zusätzlich:
+\begin{itemize}
+\item Die Erzeugung eines leeren Sparse Arrays mit $n$ Slots braucht $O(1)$ Zeit
+\item Es gibt eine Operation \texttt{reset}, die das Array in $O(1)$ Zeit leert
+\item Das Sparse Array unterstützt \texttt{get(i)} und \texttt{set(i, x)} in $O(1)$ Zeit
+\begin{itemize}
+\item \texttt{get(i)}: Gibt das Element im Slot $i$ zurück, oder $\perp$, wenn der Slot leer ist
+\item \texttt{set(i, x)}: Speichert $x$ im Slot $i$
+\end{itemize}
+\end{itemize}
+
+Wir können beliebig viel uninitialisierten Speicher in $O(1)$ Zeit allokieren.
+
+Ein Sparse Array mit $n$ Slots braucht $O(n)$ Speicher.
+\end{frame}
+
+\begin{frame}{Sparse Array}
+\begin{itemize}[<+->]
+\item Geht unsere Realisierung für große Datentypen sparsam mit dem Speicher um? Wenn nein, kann man sie noch verbessern?
+\item Welche Vor- und Nachteile im Bezug auf das Iterieren und den Speicherverbrauch hat das Sparse Array gegenüber beschränkten Arrays?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ende!}
+\centering
+\includegraphics[width=0.5\textwidth]{encryptic}
+\end{frame}
+
 
 \end{document}
