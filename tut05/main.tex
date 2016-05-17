@@ -1,0 +1,112 @@
+\documentclass[ngerman,hyperref={pdfpagelabels=false}]{beamer}
+
+% -----------------------------------------------------------------------------
+
+\graphicspath{{images/}}
+
+% -----------------------------------------------------------------------------
+
+\usetheme{KIT}
+
+\setbeamercovered{transparent}
+%\setbeamertemplate{enumerate items}[ball]
+
+\newenvironment<>{KITtestblock}[2][]
+{\begin{KITcolblock}<#1>{#2}{KITblack15}{KITblack50}}
+{\end{KITcolblock}}
+
+\usepackage[ngerman,english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[TS1,T1]{fontenc}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{beamerKITdefs}
+
+\pdfpageattr {/Group << /S /Transparency /I true /CS /DeviceRGB>>}	%required to prevent color shifting withd transparent images
+
+
+\title{Algorithmen I - Tutorium 5}
+\subtitle{Sebastian Schmidt -- \textit{isibboi@gmail.com}}
+
+\author[Sebastian Schmidt]{Sebastian Schmidt}
+\institute{Arbeitsgruppe Kryptographie und Sicherheit}
+
+\TitleImage[width=\titleimagewd,height=\titleimageht]{titel}
+
+\KITinstitute{Arbeitsgruppe Kryptographie und Sicherheit}
+\KITfaculty{Fakult\"at f\"ur Informatik}
+
+% -----------------------------------------------------------------------------
+
+\begin{document}
+\setlength\textheight{7cm} %required for correct vertical alignment, if [t] is not used as documentclass parameter
+
+
+% title frame
+\begin{frame}
+  \maketitle
+\end{frame}
+
+\begin{frame}{Sortieren}
+\begin{itemize}[<+->]
+\item Eines der verbreitetsten Probleme der Informatik
+\item In jeder Sprache in der Standardbibliothek vorhanden
+\item Wichtig für schnelle Indexdatenstrukturen jeder Art
+\item Quicksort beliebtes Thema von Bewerbungsgesprächen
+\item Easy to learn - Hard to master
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Das Problem}
+Gegeben eine Folge von $n$ Elementen $\alpha_1, ..., \alpha_n$.
+
+Finde eine Permutation $\sigma$, sodass gilt:
+
+$\forall i \in \{1, \dots, n - 1\} : \alpha_{\sigma(i)} \leq \alpha_{\sigma(i + 1)}$
+\end{frame}
+
+\begin{frame}{Die Lösungen}
+\begin{multicols}{2}
+\begin{itemize}
+\footnotesize
+\item Binary Tree Sort (höhen-balanciert)
+\item Binary Tree Sort
+\item Bogosort
+\item Bubblesort
+\item Bucketsort
+\item Combsort
+\item Countingsort
+\item Flashsort
+\item Gnomesort
+\item Heapsort
+\item \only<3>{\color{red}}Insertionsort\only<3>{\color{black}}
+\item Introsort
+\item Merge Insertion
+\item \only<3>{\color{red}}Mergesort\only<3>{\color{black}}
+\item Natural Mergesort
+\item Quicksort
+\item Radixsort (LSB)
+\item Radixsort (MSB)
+\item \only<3>{\color{red}}Selectionsort\only<3>{\color{black}}
+\item Shakersort (Cocktailsort)
+\item Shellsort
+\item Slowsort
+\item Smoothsort
+\item Stoogesort
+\item Swap-Sort
+\item Timsort
+\end{itemize}
+\end{multicols}
+
+\pause
+
+$\Rightarrow$ Es machen sich sehr viele Leute sehr viele Gedanken darüber, wie man schnell sortiert.
+\end{frame}
+
+\begin{frame}{SelectionSort}
+
+\end{frame}
+
+
+\end{document}
