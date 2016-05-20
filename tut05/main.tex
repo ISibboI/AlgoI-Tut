@@ -124,7 +124,7 @@ Was ist eine Best-Case-Eingabe?}
 \only<7>{Ist der Sortieralgorithmus stabil?}
 
 \begin{algorithm}[H]
-\begin{algorithmic}
+\begin{algorithmic}[1]
 \Function{\encode{Sort}{SelectionSort}}{$A : Number[1, \dots, n$]}
 \For{$\encode{i}{sorted}$ from $1$ to $n - 1$}
 \State $\encode{k}{minIndex} \gets \encode{i}{sorted}$
@@ -156,7 +156,7 @@ Was ist eine Best-Case-Eingabe?}
 \only<7>{Ist der Sortieralgorithmus stabil?}
 
 \begin{algorithm}[H]
-\begin{algorithmic}
+\begin{algorithmic}[1]
 \Function{\encode{Sort}{InsertionSort}}{$A : Number[1, \dots, n$]}
 \State $A[0] \gets - \infty$
 \For{$\encode{i}{sorted}$ from $2$ to $n$}
@@ -188,7 +188,7 @@ Was ist eine Best-Case-Eingabe?}
 \only<8>{Wie macht man jeden nicht-stabilen Sortieralgorithmus stabil?}
 
 \begin{algorithm}[H]
-\begin{algorithmic}
+\begin{algorithmic}[1]
 \Function{\encode{Sort}{MergeSort}}{$A : Number[1, \dots, n$]}
 \If{$n = 1$}
 \Return $A$
