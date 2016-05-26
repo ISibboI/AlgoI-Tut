@@ -48,7 +48,7 @@
   \maketitle
 \end{frame}
 
-\begin{frame}{Quicksort}
+\begin{frame}{Quicksort (abstrakt)}
 \includegraphics[width=\textwidth]{qsort_theory}
 
 \only<1>{Beispiel: 5, 1, 0, 2, 4, 3, 6
@@ -57,17 +57,54 @@ Pivotwahl: Rechts}
 
 \only<2>{Was ist eine Worst-Case-Eingabe, wenn als Pivot immer das rechte Element gewählt wird?}
 
-\only<4>{Was ist eine Best-Case-Eingabe mit sieben Elementen, wenn als Pivot immer das rechte Element gewählt wird?}
+\only<3>{Was ist eine Best-Case-Eingabe mit sieben Elementen, wenn als Pivot immer das rechte Element gewählt wird?}
 
-\only<3>{Wie muss man das Pivot wählen, um eine aufsteigend sortierte Folge schnell zu sortieren?}
+\only<4>{Wie muss man das Pivot wählen, um eine aufsteigend sortierte Folge schnell zu sortieren?}
 
-\only<4>{Wie wählt man das perfekte Pivot?
+\only<5>{Wie wählt man das perfekte Pivot?
 
 Ist das praktikabel?}
 
-\only<5>{Welche Pivotwahl-Heuristik würdet ihr wählen, wenn ihr Quicksort implementieren müsstet?}
+\only<6>{Welche Pivotwahl-Heuristik würdet ihr wählen, wenn ihr Quicksort implementieren müsstet?}
 \end{frame}
 
-% std::sort erklären?
+\begin{frame}{Exkurs: \texttt{std::sort}}
+\begin{itemize}
+\item<1-> Standardfunktion aus der C++-STL
+\item<1-> Der vermutlich meistbenutzte Sortieralgorithmus der Welt
+\vspace{1em}
+\item<2-> Funktionsweise:
+\begin{itemize}
+\item Startet mit halbrekursivem median of three Quicksort
+\item Wenn der Quicksort eine Partitionsgröße kleiner oder gleich 16 erreicht, wird auf Insertionsort gewechselt
+\item Wenn die Rekursionstiefe vom Quicksort $2 \log_2(n)$ übersteigt, wird für die entsprechende Partition auf Heapsort gewechselt
+\item Der Heapsort wird ausgeführt, bis der Heap die Größe 16 hat, dann wird auf Insertionsort gewechselt
+\end{itemize}
+\end{itemize}
+
+\pause
+\pause
+
+\only<1-3>{Warum startet man mit Quicksort?}
+
+\only<4>{Warum benutzt man auf kleinen Partitionen Insertionsort?}
+
+\only<5>{Warum benutzt man Heapsort?}
+\end{frame}
+
+\begin{frame}{Quicksort (konkret)}
+\begin{columns}
+\begin{column}{0.65\textwidth}
+\includegraphics[width=\linewidth]{qsort_partition}
+\end{column}
+\begin{column}{0.35\textwidth}
+\only<1>{Beispiel: 3, 1, 5, 6, 4, 1, 3
+
+Pivotwahl: Rechts}
+\end{column}
+\end{columns}
+\end{frame}
+
+% Bucketsort
 
 \end{document}
