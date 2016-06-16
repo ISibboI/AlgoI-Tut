@@ -26,13 +26,13 @@
 \pdfpageattr {/Group << /S /Transparency /I true /CS /DeviceRGB>>}	%required to prevent color shifting withd transparent images
 
 
-\title{Titel nicht vergessen}
+\title{Algorithmen 1 - Tutorium 9}
 \subtitle{Sebastian Schmidt -- \textit{isibboi@gmail.com}}
 
 \author[Sebastian Schmidt]{Sebastian Schmidt}
 \institute{Arbeitsgruppe Kryptographie und Sicherheit}
 
-\TitleImage[width=\titleimagewd,height=\titleimageht]{titel}
+\TitleImage[width=\titleimagewd,height=\titleimageht]{graph-theoryjpg}
 
 \KITinstitute{Arbeitsgruppe Kryptographie und Sicherheit}
 \KITfaculty{Fakult\"at f\"ur Informatik}
@@ -51,13 +51,14 @@
 \begin{frame}{Graphrepräsentationen}
 
 \Large
-\only<1>{Kantenfolge}
-\only<2>{Adjazenzfeld}
-\only<3>{Adjazenzliste}
-\only<4>{Adjazenzmatrix}
+\only<1-2>{Kantenfolge}
+\only<3-4>{Adjazenzfeld}
+\only<5-6>{Adjazenzliste}
+\only<7-8>{Adjazenzmatrix}
 
 \normalsize
 \vspace{1em}
+\only<2,4,6,8>{
 Operationen/Features:
 \begin{itemize}
 \item Kantengewichte
@@ -69,7 +70,7 @@ Operationen/Features:
 \item Kanten löschen
 \item Kanten einfügen
 \item Batched Updates
-\end{itemize}
+\end{itemize}}
 \end{frame}
 
 \begin{frame}{Adjazenzliste++}
@@ -87,6 +88,11 @@ Operationen/Features:
 
 \vspace{1em}
 Klassifiziere die Kanten als: \emph{tree}, \emph{backward}, \emph{cross}, \emph{forward}
+\end{frame}
+
+\begin{frame}
+\vspace{-4em}
+\includegraphics[width=0.85\textwidth]{hamiltonian}
 \end{frame}
 
 
