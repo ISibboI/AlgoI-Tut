@@ -26,7 +26,7 @@
 \pdfpageattr {/Group << /S /Transparency /I true /CS /DeviceRGB>>}	%required to prevent color shifting withd transparent images
 
 
-\title{Titel nicht vergessen}
+\title{Algorithmen I - Tutorium 10}
 \subtitle{Sebastian Schmidt -- \textit{isibboi@gmail.com}}
 
 \author[Sebastian Schmidt]{Sebastian Schmidt}
@@ -48,6 +48,59 @@
   \maketitle
 \end{frame}
 
+\begin{frame}{Dijkstra}
+\begin{itemize}
+\item Berechnet kürzeste Wege in Graphen mit Kantengewichten
+\item Kantengewichte müssen $\geq 0$ sein
+\item Fadenmodell
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Dijkstra}
+\includegraphics[width=\textwidth]{dijkstra_init}
+\end{frame}
+
+\begin{frame}{Dijkstra}
+\includegraphics[width=\textwidth]{dijkstra_algo}
+\end{frame}
+
+\begin{frame}{Dijkstra Variante}
+Beschreibe einen Algorithmus, der in einem Graphen mit Kantengewichten den kürzesten Pfad mit den wenigsten Kanten ausgibt.
+\end{frame}
+
+\begin{frame}{Wolf-Ziege-Kohlkopf}
+\begin{itemize}
+\item Zwei Seiten $A, B$ eines Flusses
+\item Ein Fährmann will einen Wolf $W$, eine Ziege $Z$ und einen Kohlkopf $K$ von Seite $A$ auf Seite $B$ befördern
+\item In sein Boot passen immer nur er und ein Tier
+\item Lässt man Wolf und Ziege alleine, frisst der Wolf die Ziege
+\item Lässt man Ziege und Kohlkopf alleine, frisst die Ziege den Kohlkopf
+\item Es darf weder die Ziege noch der Kohlkopf gefressen werden
+\end{itemize}
+
+Modelliere das Wolf-Ziege-Kohlkopfproblem mit einem Graphen.
+\end{frame}
+
+\begin{frame}{Dominosteine}
+Gegeben folgende Dominosteine:
+
+\only<1>{1/4}\only<2>{{\color{red}1/6}}, 1/2, 1/5, 1/3, 4/6, 4/2, 4/5, 6/2, 2/5, 5/3
+
+\vspace{1em}
+\only<1>{
+Es dürfen nur gleiche Zahlen aneinandergelegt werden.
+Der Winkel und Abstand aneinanderliegender Steine soll vernachlässigt werden.
+Ist es möglich, alle Steine in einen Kreis zu legen?}
+
+\only<2>{
+Ändere 1/4 zu 1/6.
+Ist es immernoch möglich, alle Steine in einen Kreis zu legen?
+Ist es durch entfernen eines Steins möglich, alle übrigen Steine in einen Kreis zu legen?}
+\end{frame}
+
+\begin{frame}{Dominosteine}
+Was muss im Allgemeinen für eine Menge von Dominosteinen gelten, damit sich aus ihr ein Kreis legen lässt?
+\end{frame}
 
 
 \end{document}
