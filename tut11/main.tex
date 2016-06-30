@@ -26,7 +26,7 @@
 \pdfpageattr {/Group << /S /Transparency /I true /CS /DeviceRGB>>}	%required to prevent color shifting withd transparent images
 
 
-\title{Titel nicht vergessen}
+\title{Algorithmen I - Tutorium 11}
 \subtitle{Sebastian Schmidt -- \textit{isibboi@gmail.com}}
 
 \author[Sebastian Schmidt]{Sebastian Schmidt}
@@ -48,7 +48,34 @@
   \maketitle
 \end{frame}
 
+\begin{frame}{Minimale Spannbäume}
+Sei $G = (V, E)$ ein Graph.
 
+\vspace{1em}
+\emph{Schnitteigenschaft:}
+
+Sei $S \subset E$ ein Schnitt in $G$.
+Dann gehört eine Kante mit dem kleinsten Gewicht in $S$ zum MST.
+
+\vspace{1em}
+\emph{Kreiseigenschaft:}
+
+Sei $K \subset E$ ein Kreis in $G$.
+Dann gehört eine größte Kante auf $K$ nicht zum MST.
+
+\pause
+\vspace{1em}
+Was ist der MST zum gegebenen Beispielgraphen? (Tafel)
+\end{frame}
+
+\begin{frame}{Jarník-Prim}
+\vspace{-1.9em}
+\includegraphics[width=0.9\textwidth]{jp}
+\end{frame}
+
+\begin{frame}{Kruskal}
+\includegraphics[width=\textwidth]{k}
+\end{frame}
 
 
 \end{document}
