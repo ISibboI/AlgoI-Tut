@@ -26,7 +26,7 @@
 \pdfpageattr {/Group << /S /Transparency /I true /CS /DeviceRGB>>}	%required to prevent color shifting withd transparent images
 
 
-\title{Titel nicht vergessen}
+\title{Algorithmen I - Tutorium 13/13}
 \subtitle{Sebastian Schmidt -- \textit{isibboi@gmail.com}}
 
 \author[Sebastian Schmidt]{Sebastian Schmidt}
@@ -49,129 +49,39 @@
 \end{frame}
 
 
-% intro
-\section{Introduction}
-\begin{frame}
-  \frametitle{Titel}
-  \framesubtitle{Untertitel}
+\begin{frame}{Dynamische Programmierung}
+\begin{itemize}
+\item Zur Lösung von Optimierungsproblemen
+\item Optimale Lösung setzt sich aus optimalen Lösungen von Teilproblemen zusammen
+\end{itemize}
 
-  \heading{Heading}
-  \begin{itemize}
-  \item alerts: \emph{emph}, \galert{green}, \ralert{red}, \balert{blue}
-  \item wall of text to see an actual line break happen on this slide and on this line
-  \end{itemize}
-
-	\bigskip
-	\bigskip
-	\pause  
-
-  \heading{KITcolumns}
-  \begin{KITcolumns}
-  \column{0.49\textwidth}
-  column 1
-  \column{0.49\textwidth}
-  column 2
-  \end{KITcolumns}
-
-  \begin{textblock*}{0.5\linewidth}(8.5cm,5.2cm)
-  \KITbild[width=3cm]{questionmark}
-  \end{textblock*}
-  
+\begin{enumerate}
+\item Direktes Lösen kleinster Teilprobleme
+\item Löse nächstgrößere Teilprobleme, bis Lösung für das Ursprüngliche Problem gefunden
+\end{enumerate}
 \end{frame}
 
+\begin{frame}{Algorithmus von Floyd}
+$w[i, j]$ ist die Gewichtsmatrix des Graphen.
 
-% blocks
-\begin{frame}
-	\frametitle{Blöcke}
-	\framesubtitle{in bunt}
+$d[i, j]$ ist der aktuelle kürzeste Weg von $i$ nach $j$, der nur über Knoten $<k$ führt.
 
-	\begin{KITalertblock}{alert}
-	\begin{itemize}
-	\item red
-	\end{itemize}
-	\end{KITalertblock}
+\vspace{1em}
 
-	\bigskip
-	\smallskip
-	\pause
-
-	\begin{KITinfoblock}{info}
-	\begin{itemize}
-		\item green
-	\end{itemize}
-	\end{KITinfoblock}
-	
-	\bigskip
-	\smallskip
-	\pause
-
-	\begin{KITexampleblock}{example}
-	\begin{itemize}
-		\item blue
-	\end{itemize}
-	\end{KITexampleblock}
-
-	\bigskip
-	\smallskip
-	\pause
-
-	\begin{KITblock}{normal}
-	\begin{itemize}
-		\item gray
-	\end{itemize}
-	\end{KITblock}
-
+\includegraphics[width=\textwidth]{floyd}
 \end{frame}
 
-
-% blocks continued
-\begin{frame}
-	\frametitle{Blöcke}
-	\framesubtitle{in bunt (2)}
-
-	\begin{KITcolblock}{arbitrarily colored block}{KITgreen50}{KITred15}
-	\begin{itemize}
-		\item colorful
-	\end{itemize}
-	\end{KITcolblock}
-
-	\bigskip
-	\smallskip
-	\pause
-
-	\setboolean{KITblockborder}{false}
-	\begin{KITblock}{no border}
-	\begin{itemize}
-		\item use \textbackslash setboolean\{KITblockborder\}\{true or false\} to switch block borders on or off
-	\end{itemize}
-	\end{KITblock}
-
-	\bigskip
-	\smallskip
-	\pause	
-
-	\heading{enumerate environment}
-	\begin{enumerate}
-		\item level 1
-		\begin{enumerate}
-			\item level 2
-			\item level 2
-			\begin{enumerate}
-				\item level 3
-				\item level 3
-			\end{enumerate}
-		\end{enumerate}
-	\end{enumerate}
-
+\begin{frame}{Branch-and-Bound}
+Branch and Bound für TSP. Tafel.
 \end{frame}
 
+\begin{frame}{Wiederholung}
+Fragen? :)
+\end{frame}
 
-% drawing area
 \begin{frame}
-	\frametitle{Area for Text}
-	\framesubtitle{The big black box}
-
-	\rule{\textwidth}{\textheight}
+\vspace{-4em}
+\includegraphics[width=0.87\textwidth]{xkcd_phone_4}
 \end{frame}
 
 \end{document}
